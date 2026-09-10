@@ -1,0 +1,37 @@
+<?php
+// Página principal
+?>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <section class="card">
+            <h1>Tienda Demo</h1>
+            <p class="description">Producto de prueba para integrar Mercado Pago.</p>
+
+            <div class="product">
+                <div>
+                    <h2>Producto de prueba</h2>
+                    <p>Descripción breve del producto.</p>
+                </div>
+                <strong>$ 1.000 ARS</strong>
+            </div>
+
+            <form action="crear_preferencia.php" method="POST">
+                <input type="hidden" name="producto" value="Producto de prueba">
+                <input type="hidden" name="precio" value="10000">
+                <input type="hidden" name="cantidad" value="1">
+                <button type="submit">Comprar con Mercado Pago</button>
+            </form>
+
+            <p class="note">La compra se completa en el entorno seguro de Mercado Pago.</p>
+        </section>
+    </main>
+</body>
+</html>
