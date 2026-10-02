@@ -1,12 +1,11 @@
 <?php
-
 require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/config.php';
 
 use MercadoPago\MercadoPagoConfig;
 use MercadoPago\Client\Preference\PreferenceClient;
 
-require_once __DIR__ . '/config.php';
-
+// Configurar el Access Token usando la constante definida en config.php
 MercadoPagoConfig::setAccessToken(MERCADOPAGO_ACCESS_TOKEN);
 
 $producto = $_POST['producto'] ?? 'Producto de prueba';
@@ -40,5 +39,5 @@ try {
 } catch (Exception $e) {
     http_response_code(500);
     echo "No se pudo crear la preferencia de pago.";
-    echo "<br>Error: " . $e->getMessage();
+    
 }
