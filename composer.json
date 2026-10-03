@@ -1,0 +1,9 @@
+{
+  "name": "proyecto-escolar/mercadopago-checkout-pro",
+  "description": "Integración escolar de Mercado Pago Checkout Pro con PHP",
+  "type": "project",
+  "require": {
+    "php": ">=8.2",
+    "mercadopago/dx-php": "3.10.0"
+  }
+}
